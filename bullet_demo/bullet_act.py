@@ -29,7 +29,7 @@ tableUid = p.loadURDF("table/table.urdf", basePosition=[0.5, 0, -0.65])
 # 加载托盘
 trayUid = p.loadURDF("tray/traybox.urdf", basePosition=[0.65, 0, 0])
 # 加载杯子
-cupUid = p.loadURDF("/home/lyx/桌面/robot/运动学正逆解方法/bullet_demo/cup.urdf", basePosition=[0.8, 0, 0])
+cupUid = p.loadURDF("/home/lyx/桌面/Github仓库/RMC/bullet_demo/cup.urdf", basePosition=[0.8, 0, 0])
 
 # 加载随机物体
 objectUid = p.loadURDF("random_urdfs/000/000.urdf", basePosition=[0.7, 0, 0.1])
