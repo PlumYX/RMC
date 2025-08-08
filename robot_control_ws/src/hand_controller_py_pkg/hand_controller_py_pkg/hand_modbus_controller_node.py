@@ -88,9 +88,17 @@ class HandControllerNode(Node):
         self.get_logger().info(f"获取控制模式: {getMode}")
 
     def set_joint_positions_angle(self, target_list):
+        """ 
+        target_list = [拇指, 食指, 中指, 无名指] 
+        *指 = [偏角, 仰角, 近端关节角, 远端关节角]
+        """
         if len(target_list) != 16:
             self.get_logger().info("列表长度不是 16!")
             return 
+
+        for i in range(1, 4):
+            target_list[3 + i * 4] = 0
+        target = target_list[4:] + target_list[:4]
 
         finger_angles = [FingerAngle() for _ in range(4)]
         for i, finger_angle in enumerate(finger_angles):
@@ -99,11 +107,8 @@ class HandControllerNode(Node):
                 finger_angle.joint2, 
                 finger_angle.joint3, 
                 finger_angle.joint4, 
-            ) = target_list[i * 4: (i + 1) * 4]
+            ) = target[i * 4: (i + 1) * 4]
         return self.control.setJointPositionsAngle(finger_angles)
-
-        # [拇指] = [偏角, 仰角, 近端关节角, 远端关节角]
-        # [[食指], [中指], [无名指], [拇指]]
 
 
 def main():
