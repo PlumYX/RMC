@@ -128,8 +128,6 @@ class HandMimicrySimulationNode(Node):
 
 def main():
     rclpy.init()
-
     node = HandMimicrySimulationNode("hand_mimicry_simulation_subscriber")
-
     rclpy.spin(node)
     rclpy.shutdown()

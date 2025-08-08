@@ -385,8 +385,6 @@ class JointAnglesComputeNode(Node):
 
 def main():
     rclpy.init()
-
     node = JointAnglesComputeNode("hand_angles_compute_publisher")
-
     rclpy.spin(node)
     rclpy.shutdown()
