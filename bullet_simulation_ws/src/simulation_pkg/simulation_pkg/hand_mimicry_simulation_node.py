@@ -85,6 +85,7 @@ class HandMimicrySimulationNode(Node):
                 "dexh13_right.urdf", 
                 ), 
             basePosition=[0, 0, 0], 
+            baseOrientation=[0, -1, 0, 1], 
             useFixedBase=True,
             )
         if self.dexh13RightUid == -1:

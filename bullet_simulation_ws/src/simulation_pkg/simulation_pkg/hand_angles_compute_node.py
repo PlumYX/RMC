@@ -352,17 +352,17 @@ class JointAnglesComputeNode(Node):
                         clip(int(thumb_proximal_angle * 2.0), 0, 90),
                         clip(int(thumb_distal_angle * 2.0), 0, 90),
 
-                        clip(int(index_finger_mcp_yaw_angle), -20, 20),
+                        clip(int((index_finger_mcp_yaw_angle + 10) * 1.5), -20, 20),
                         clip(int(index_finger_mcp_up_angle * 1.5), 0, 90),
                         clip(int(index_finger_proximal_angle * 2.0), 0, 90),
                         clip(int(index_finger_distal_angle * 2.0), 0, 90),
 
-                        clip(int(middle_finger_mcp_yaw_angle) - 10, -20, 20),
+                        clip(int(middle_finger_mcp_yaw_angle * 1.5), -20, 20),
                         clip(int(middle_finger_mcp_up_angle * 1.5), 0, 90),
                         clip(int(middle_finger_proximal_angle * 2.0), 0, 90),
                         clip(int(middle_finger_distal_angle * 2.0), 0, 90),
 
-                        clip(int(ring_finger_mcp_yaw_angle) - 20, -20, 20),
+                        clip(int((ring_finger_mcp_yaw_angle - 10) * 1.5), -20, 20),
                         clip(int(ring_finger_mcp_up_angle * 1.5), 0, 90),
                         clip(int(ring_finger_proximal_angle * 2.0), 0, 90),
                         clip(int(ring_finger_distal_angle * 2.0), 0, 90),
