@@ -12,10 +12,10 @@
     <visual>
       <origin rpy="0 0 0" xyz="0 0 0.6"/>
       <geometry>
-        <mesh filename="package://simulation_pkg/meshes/table.obj" scale="1.5 1 0.05"/>
+        <mesh filename="package://bullet_simulation_pkg/meshes/table.obj" scale="1.5 1 0.05"/>
       </geometry>
         <material name="white">
-        <color filename="package://simulation_pkg/meshes/table.mtl"/>
+        <color filename="package://bullet_simulation_pkg/meshes/table.mtl"/>
       </material>
     </visual>
       <collision>
@@ -27,28 +27,28 @@
     <visual>
       <origin rpy="0 0 0" xyz="-0.65 -0.4 0.29"/>
       <geometry>
-        <mesh filename="package://simulation_pkg/meshes/table.obj" scale="0.1 0.1 0.58"/>
+        <mesh filename="package://bullet_simulation_pkg/meshes/table.obj" scale="0.1 0.1 0.58"/>
       </geometry>
 	  <material name="framemat0"/>	 
     </visual>
     <visual>
       <origin rpy="0 0 0" xyz="-0.65 0.4 0.29"/>
       <geometry>
-        <mesh filename="package://simulation_pkg/meshes/table.obj" scale="0.1 0.1 0.58"/>
+        <mesh filename="package://bullet_simulation_pkg/meshes/table.obj" scale="0.1 0.1 0.58"/>
       </geometry>
 	  <material name="framemat0"/>
 	  </visual>
     <visual>
       <origin rpy="0 0 0" xyz="0.65 -0.4 0.29"/>
       <geometry>
-        <mesh filename="package://simulation_pkg/meshes/table.obj" scale="0.1 0.1 0.58"/>
+        <mesh filename="package://bullet_simulation_pkg/meshes/table.obj" scale="0.1 0.1 0.58"/>
       </geometry>
 	  <material name="framemat0"/>
 	  </visual>
     <visual>
       <origin rpy="0 0 0" xyz="0.65 0.4 0.29"/>
       <geometry>
-        <mesh filename="package://simulation_pkg/meshes/table.obj" scale="0.1 0.1 0.58"/>
+        <mesh filename="package://bullet_simulation_pkg/meshes/table.obj" scale="0.1 0.1 0.58"/>
       </geometry>
     </visual>
   </link>

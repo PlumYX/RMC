@@ -2,7 +2,7 @@ from setuptools import find_packages, setup
 import os
 from glob import glob
 
-package_name = 'simulation_pkg'
+package_name = 'bullet_simulation_pkg'
 
 setup(
     name=package_name,
@@ -28,8 +28,7 @@ setup(
     tests_require=['pytest'],
     entry_points={
         'console_scripts': [
-            'hand_mimicry_simulation_node = simulation_pkg.hand_mimicry_simulation_node:main',
-            'hand_angles_compute_node = simulation_pkg.hand_angles_compute_node:main'
+            'hand_mimicry_simulation_node = bullet_simulation_pkg.hand_mimicry_simulation_node:main', 
         ],
     },
 )

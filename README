@@ -1,0 +1,47 @@
+机器人运动控制开发文档
+
+
+程序框架与说明
+ros2_node_tempalate_ws: ros2 节点模版
+说明: 提供 ros2 的"发布-订阅"、"客户端-服务端"节点程序模板
+语言: c++/python
+作用: 快速开发
+
+
+vision_computing_ws: 视觉计算
+说明: 机器视觉与数据计算程序
+语言: c++/python
+作用: 机器视觉输入 --> 位姿数据
+
+vision_computing_ws 功能介绍
+  recog_compute_py_pkg 识别与计算功能包
+    hand_angles_compute_node 人手关节角度识别与计算节点
+
+
+algorithm_computing_ws: 算法计算
+说明: 机器人运动控制算法计算程序
+语言: c++
+作用: 位姿数据 --> 运动控制数据
+
+
+robot_simulation_ws: 机器人仿真
+说明: 机器人多平台配置与仿真程序
+语言: python
+作用: 机器视觉与运动控制算法验证
+
+robot_simulation_ws 功能介绍
+  bullet_simulation_pkg bullet 仿真功能包
+    hand_mimicry_simulation_node 灵巧手模仿仿真节点
+
+
+robot_control_ws: 机器人控制
+说明: 真实机器人运动控制程序
+语言: c++/python
+作用: 运动控制数据 --> 电机控制
+
+robot_control_ws 功能介绍
+  hand_controller_py_pkg 手控制功能包(python)
+    hand_modbus_controller_node modbus 手控制节点
+
+
+

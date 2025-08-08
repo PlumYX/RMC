@@ -13,6 +13,8 @@ class HandMimicrySimulationNode(Node):
     def __init__(self, node_name):
         super().__init__(node_name)
 
+        self.pkg_name = "bullet_simulation_pkg"
+
         self.simple_subscriber = self.create_subscription(
             msg_type = String, 
             topic = "/hand_ctrl", 
@@ -43,7 +45,7 @@ class HandMimicrySimulationNode(Node):
         # 加载地面
         self.sceneUid = pybullet.loadURDF(
             os.path.join(
-                get_package_share_directory("simulation_pkg"), 
+                get_package_share_directory(self.pkg_name), 
                 "urdf", 
                 "plane.urdf", 
                 ), 
@@ -55,7 +57,7 @@ class HandMimicrySimulationNode(Node):
         # 加载桌子
         self.tableUid = pybullet.loadURDF(
             os.path.join(
-                get_package_share_directory("simulation_pkg"), 
+                get_package_share_directory(self.pkg_name), 
                 "urdf", 
                 "table.urdf", 
                 ), 
@@ -67,7 +69,7 @@ class HandMimicrySimulationNode(Node):
         # 加载杯子
         self.tableUid = pybullet.loadURDF(
             os.path.join(
-                get_package_share_directory("simulation_pkg"), 
+                get_package_share_directory(self.pkg_name), 
                 "urdf", 
                 "cup.urdf", 
                 ), 
@@ -80,7 +82,7 @@ class HandMimicrySimulationNode(Node):
         # 加载灵巧手(右)
         self.dexh13RightUid = pybullet.loadURDF(
             os.path.join(
-                get_package_share_directory("simulation_pkg"), 
+                get_package_share_directory(self.pkg_name), 
                 "urdf", 
                 "dexh13_right.urdf", 
                 ), 
